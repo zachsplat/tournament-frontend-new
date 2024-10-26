@@ -1,0 +1,21 @@
+{
+  "build": {
+    "env": {
+      "CI": "false",
+      "NODE_ENV": "production"
+    },
+    "steps": [
+      {
+        "name": "Install dependencies",
+        "command": "npm ci"
+      },
+      {
+        "name": "Build",
+        "command": "npm run build"
+      }
+    ]
+  },
+  "start": {
+    "command": "npx serve -s build"
+  }
+}
